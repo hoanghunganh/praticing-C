@@ -32,11 +32,11 @@ for (int i = 0; i < maxPets; i++)
 
         case 1:
             animalSpecies = "dog";
-            animalID = "d1";
-            animalAge = "2";
-            animalPhysicalDescription = "medium sized cream colored female golden retriever weighing about 65 pounds. housebroken.";
-            animalPersonalityDescription = "loves to have her belly rubbed and likes to chase her tail. gives lots of kisses.";
-            animalNickname = "lola";
+            animalID = "d2";
+            animalAge = "9";
+            animalPhysicalDescription = "large reddish-brown male golden retriever weighing about 85 pounds. housebroken.";
+            animalPersonalityDescription = "loves to have his ears rubbed when he greets you at the door, or at any time! loves to lean-in and give doggy hugs.";
+            animalNickname = "loki";
             break;
 
         case 2:
@@ -58,9 +58,9 @@ for (int i = 0; i < maxPets; i++)
             break;
 
         default:
-            animalSpecies = "cat";
-            animalID = "c4";
-            animalAge = "?";
+            animalSpecies = "";
+            animalID = "";
+            animalAge = "";
             animalPhysicalDescription = "";
             animalPersonalityDescription = "";
             animalNickname = "";
@@ -109,9 +109,13 @@ do
         case "1":
             for (int i = 0; i < maxPets; i++)
             {
-                if (ourAnimals[i,0] != "ID #: ")
+                if (ourAnimals[i, 0] != "ID #: ")
                 {
-                    System.Console.WriteLine(ourAnimals[i, 0]);
+                    System.Console.WriteLine();
+                    for (int j = 0; j < 6; j++)
+                    {
+                        System.Console.WriteLine(ourAnimals[i, j]);
+                    }
                 }
             }
             Console.WriteLine("Press the Enter key to continue.");
